@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Micro-ondas Electrolux 27L Cinza MS37R",
+    "price": "R$ 925,65",
+    "image": "https://brastemp.vtexassets.com/arquivos/ids/272263-1600-auto?v=639009631783870000&width=1600&height=auto&aspect=true",
+    "link": "https://www.brastemp.com.br/micro-ondas-brastemp-preto-grill-32-litros-bmg45ae/p?idsku=2004067&gad_source=1&gad_campaignid=21987790453&gbraid=0AAAAADJ0Bqon91QhltZUXl0pXfrDGnKFq&gclid=Cj0KCQiA7rDMBhCjARIsAGDBuECtL4xfw8_TTn5z2NTpytf0y_889U5uV1dYGALK4ObclTrzHD_v19MaAkLBEALw_wcB"
+  },
+  {
+    "name": "Jogo de Panelas Tramontina 5 Peças",
+    "price": "R$ 489,90",
+    "image": "https://images.tcdn.com.br/img/img_prod/1088044/jogo_de_panelas_tramontina_paris_ceramic_life_smart_plus_em_aluminio_com_revestimento_antiaderente_ceramico_5_pecas_20900_005_4903_1_e26412e12683f4304b20dca11b7f6fff.jpg",
+    "link": "https://www.tramontina.com.br"
+  },
+  {
+    "name": "Jogo de Cama Queen 400 Fios",
+    "price": "R$ 359,90",
+    "image": "https://cdn.awsli.com.br/2500x2500/2599/2599751/produto/2331937428c6f04dc0f.jpg",
+    "link": "https://www.tokstok.com.br"
+  },
+  {
+    "name": "Cafeteira Expresso Nespresso Vertuo",
+    "price": "R$ 1.299,00",
+    "image": "https://images-americanas.b2w.io/produtos/7431547850/imagens/cafeteira-nespresso-vertuo-pop-preta-220v/7431547850_1_large.jpg",
+    "link": "https://www.nespresso.com/br"
+  },
+  {
+    "name": "Conjunto de Taças de Cristal 6 Peças",
+    "price": "R$ 274,90",
+    "image": "https://images.tcdn.com.br/img/img_prod/1088044/jogo_com_6_tacas_de_cristal_para_vinho_tinto_450ml_bohemia_gastro_colibri_3048_1_7f1a3b88b8a5b4a3f2a0f8a1f5a2c399.jpg",
+    "link": "https://www.vivara.com.br"
+  },
+  {
+    "name": "Robô Aspirador Intelbras",
+    "price": "R$ 1.899,00",
+    "image": "https://images.tcdn.com.br/img/img_prod/677094/robo_aspirador_de_po_intelbras_izy_smart_rc100_9012_1_bcab52dcf4c0f8b21fbc3b5c6e35cc11.jpg",
+    "link": "https://www.intelbras.com"
+  },
+  {
+    "name": "Liquidificador Oster 1400W",
+    "price": "R$ 449,90",
+    "image": "https://images-americanas.b2w.io/produtos/6210783040/imagens/liquidificador-oster-oliq610-1400-full/6210783040_1_large.jpg",
+    "link": "https://www.oster.com.br"
+  },
+  {
+    "name": "Jogo de Toalhas Buddemeyer 5 Peças",
+    "price": "R$ 199,90",
+    "image": "https://images.tcdn.com.br/img/img_prod/1088044/jogo_de_toalhas_5_pecas_buddemeyer_fio_penteado_canelado_bege_1060_1_a39b1bcd65f91b876b64e2f83e11efe5.jpg",
+    "link": "https://www.buddemeyer.com.br"
+  }
+]

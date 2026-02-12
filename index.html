@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Presentes — Nosso Casamento</title>
+  <meta name="description" content="Lista de presentes de casamento. Escolha o presente perfeito para celebrar este momento especial conosco.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__pretext animate-fade-up" style="animation-delay: 0.2s">Celebre conosco</p>
+      <h1 class="hero__title animate-fade-up" style="animation-delay: 0.5s">
+        <span class="hero__name">Maria</span>
+        <span class="hero__ampersand">&amp;</span>
+        <span class="hero__name">João</span>
+      </h1>
+      <div class="hero__divider animate-fade-up" style="animation-delay: 0.8s"></div>
+      <p class="hero__date animate-fade-up" style="animation-delay: 1.0s">15 de Março de 2026</p>
+      <p class="hero__subtitle animate-fade-up" style="animation-delay: 1.2s">Nossa Lista de Presentes</p>
+      <a href="#gifts" class="hero__cta animate-fade-up" style="animation-delay: 1.5s">Ver Presentes</a>
+    </div>
+  </header>
+
+  <!-- Gifts Section -->
+  <main class="gifts-section" id="gifts">
+    <div class="section-header">
+      <p class="section-label">Com Carinho</p>
+      <h2 class="section-title">Presentes</h2>
+      <p class="section-description">Cada presente escolhido com amor para começar nossa nova vida juntos. Clique em um presente para ser direcionado à loja.</p>
+    </div>
+    <div class="gifts-grid" id="gifts-grid">
+      <!-- Cards injected by script.js -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__ornament"></div>
+    <p class="footer__text">Feito com <span class="footer__heart">♥</span> por Maria & João</p>
+    <p class="footer__subtext">Obrigado por fazer parte deste momento especial</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
