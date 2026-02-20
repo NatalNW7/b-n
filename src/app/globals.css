@@ -691,6 +691,47 @@ a {
   box-shadow: 0 6px 20px rgba(245, 230, 163, 0.25);
 }
 
+/* ---- Countdown ---- */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.countdown__block {
+  text-align: center;
+}
+
+.countdown__digit {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--butter-yellow);
+  line-height: 1;
+  display: block;
+}
+
+.countdown__label {
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--off-white);
+  opacity: 0.5;
+  margin-top: 4px;
+  display: block;
+}
+
+.countdown__past {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--butter-yellow);
+  margin-bottom: var(--space-lg);
+}
+
 
 /* ---------- Animations ---------- */
 @keyframes fadeUp {
@@ -1079,6 +1120,8 @@ a {
   .ceremony__cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .countdown__digit { font-size: 3.2rem; }
 }
 
 
@@ -1088,6 +1131,9 @@ a {
 @media (min-width: 900px) {
   .nav__links { display: flex; }
   .nav__hamburger { display: none; }
+
+  .countdown { gap: var(--space-xl); }
+  .countdown__digit { font-size: 3.8rem; }
 
   .photo-hub__gallery { columns: 3; }
   .photo-hub { padding: var(--space-2xl) var(--space-lg); }
