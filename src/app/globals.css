@@ -307,6 +307,202 @@ a {
 }
 
 
+/* ========================================
+   RSVP SECTION
+   ======================================== */
+.rsvp {
+  padding: var(--space-xl) var(--space-sm) var(--space-2xl);
+  background: var(--pink-light);
+}
+
+.rsvp .section-header {
+  margin-bottom: var(--space-lg);
+}
+
+/* ---- Form ---- */
+.rsvp__form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ---- Input group ---- */
+.rsvp__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rsvp__label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--black);
+}
+
+.rsvp__input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--black);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.2);
+  padding: var(--space-xs) 0;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.rsvp__input:focus {
+  border-color: var(--pink-dark);
+  box-shadow: 0 2px 8px rgba(232, 168, 163, 0.25);
+}
+
+.rsvp__input--error {
+  border-color: #c0392b;
+}
+
+.rsvp__error {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: #c0392b;
+  margin-top: 2px;
+}
+
+/* ---- Textarea ---- */
+.rsvp__textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* ---- Guest stepper ---- */
+.rsvp__stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.rsvp__stepper-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--black);
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), color var(--transition);
+}
+
+.rsvp__stepper-btn:hover {
+  background: var(--black);
+  color: var(--off-white);
+}
+
+.rsvp__stepper-value {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  min-width: 2ch;
+  text-align: center;
+}
+
+/* ---- Attending toggle ---- */
+.rsvp__toggle {
+  display: flex;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid var(--black);
+  width: fit-content;
+}
+
+.rsvp__toggle-option {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.7em 1.8em;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--black);
+  transition: background var(--transition), color var(--transition);
+}
+
+.rsvp__toggle-option--active {
+  background: var(--black);
+  color: var(--off-white);
+}
+
+/* ---- Submit button ---- */
+.rsvp__submit {
+  align-self: center;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--off-white);
+  background: var(--black);
+  padding: 0.9em 2.4em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition),
+              box-shadow var(--transition);
+}
+
+.rsvp__submit:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 26, 26, 0.2);
+}
+
+/* ---- Confirmation ---- */
+.rsvp__confirmation {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: var(--space-xl) 0;
+  animation: confirmReveal 0.6s ease forwards;
+}
+
+@keyframes confirmReveal {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.rsvp__confirmation-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.rsvp__confirmation-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: var(--space-xs);
+}
+
+.rsvp__confirmation-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--black);
+  opacity: 0.65;
+}
+
+
 /* ---------- Animations ---------- */
 @keyframes fadeUp {
   from {
