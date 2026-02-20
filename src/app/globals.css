@@ -504,6 +504,95 @@ a {
 
 
 
+
+/* ========================================
+   OUR STORY / TIMELINE
+   ======================================== */
+.story {
+  padding: var(--space-xl) var(--space-sm) var(--space-2xl);
+  background: var(--off-white);
+  overflow: hidden;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Vertical connector line */
+.timeline__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 1px;
+  background: rgba(26, 26, 26, 0.12);
+}
+
+/* Timeline item */
+.timeline__item {
+  position: relative;
+  padding-left: 52px;
+  margin-bottom: var(--space-xl);
+}
+
+/* Dot on the line */
+.timeline__dot {
+  position: absolute;
+  left: 14px;
+  top: 4px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--off-white);
+  border: 2px solid var(--pink-dark);
+  z-index: 2;
+}
+
+.timeline__date {
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--pink-dark);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.timeline__title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: var(--space-xs);
+}
+
+.timeline__description {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--black);
+  opacity: 0.65;
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+.timeline__image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-sm);
+  box-shadow: var(--shadow-card);
+}
+
+.timeline__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* ========================================
    PHOTO HUB SECTION
    ======================================== */
@@ -1137,6 +1226,41 @@ a {
 
   .photo-hub__gallery { columns: 3; }
   .photo-hub { padding: var(--space-2xl) var(--space-lg); }
+
+  /* Timeline: alternating left/right */
+  .timeline__line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline__item {
+    width: 50%;
+    padding-left: 0;
+  }
+
+  .timeline__item--left {
+    margin-left: 0;
+    padding-right: var(--space-xl);
+    text-align: right;
+  }
+
+  .timeline__item--left .timeline__description {
+    margin-left: auto;
+  }
+
+  .timeline__item--left .timeline__dot {
+    left: auto;
+    right: -7px;
+  }
+
+  .timeline__item--right {
+    margin-left: 50%;
+    padding-left: var(--space-xl);
+  }
+
+  .timeline__item--right .timeline__dot {
+    left: -7px;
+  }
 
   .ceremony__cards {
     grid-template-columns: repeat(3, 1fr);
