@@ -16,7 +16,7 @@ export default function OurStorySection() {
 
       <RevealObserver>
         <div className="timeline">
-          <div className="timeline__line" />
+          <div className="timeline__connector" />
           {story.map((item, i) => (
             <TimelineItem key={item.title} {...item} index={i} />
           ))}

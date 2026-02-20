@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface TimelineItemProps {
   date: string;
   title: string;
@@ -18,7 +20,14 @@ export default function TimelineItem({ date, title, description, image, index }:
 
       {image && (
         <div className="timeline__image">
-          <img src={image} alt={title} loading="lazy" />
+          <Image
+            src={image}
+            alt={title}
+            width={450}
+            height={450}
+            sizes="(max-width: 900px) 80vw, 400px"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
       )}
 

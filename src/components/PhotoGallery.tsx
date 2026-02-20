@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import PhotoLightbox from "./PhotoLightbox";
 
 interface Photo {
@@ -26,7 +27,14 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             style={{ transitionDelay: `${i * 0.1}s` }}
             onClick={() => setSelected(photo)}
           >
-            <img src={photo.src} alt={photo.alt} loading="lazy" />
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={400}
+              height={500}
+              sizes="(max-width: 540px) 50vw, (max-width: 900px) 33vw, 400px"
+              style={{ width: "100%", height: "auto" }}
+            />
             <span className="photo-hub__author">{photo.author}</span>
           </div>
         ))}

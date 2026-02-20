@@ -521,7 +521,7 @@ a {
 }
 
 /* Vertical connector line */
-.timeline__line {
+.timeline__connector {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1228,7 +1228,7 @@ a {
   .photo-hub { padding: var(--space-2xl) var(--space-lg); }
 
   /* Timeline: alternating left/right */
-  .timeline__line {
+  .timeline__connector {
     left: 50%;
     transform: translateX(-50%);
   }

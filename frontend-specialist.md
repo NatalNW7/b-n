@@ -34,19 +34,35 @@ Before any frontend work, read the required skills and design reference:
 
 ```
 src/
-├── app/                  # View layer — pages & layouts (Next.js routing)
-│   ├── layout.tsx        # Root layout (fonts, metadata, html skeleton)
-│   ├── page.tsx          # Home page — composes section components
-│   ├── globals.css       # All styles (design system implementation)
+├── app/                       # View layer — pages & layouts (Next.js routing)
+│   ├── layout.tsx             # Root layout (fonts, metadata, html skeleton)
+│   ├── page.tsx               # Home page — composes section components
+│   ├── globals.css            # All styles (design system implementation)
 │   └── favicon.ico
-├── components/           # View layer — reusable UI components
-│   ├── Hero.tsx          # Hero section (server component)
-│   ├── GiftsSection.tsx  # Gift list section header + grid (server component)
-│   ├── GiftsGrid.tsx     # Scroll-reveal grid wrapper (client component)
-│   ├── GiftCard.tsx      # Individual gift card with shimmer loading (client component)
-│   └── Footer.tsx        # Footer with pulsing heart (server component)
-└── data/                 # Model layer — data sources
-    └── gifts.json        # Gift items (name, price, image URL, store link)
+├── components/                # View layer — reusable UI components
+│   ├── Hero.tsx               # Hero section (server)
+│   ├── Navigation.tsx         # Fixed nav bar with IntersectionObserver (client)
+│   ├── OurStorySection.tsx    # Timeline section wrapper (server)
+│   ├── TimelineItem.tsx       # Individual timeline milestone (server)
+│   ├── CeremonySection.tsx    # Ceremony info section (server)
+│   ├── CeremonyCard.tsx       # Ceremony info card (server)
+│   ├── RsvpSection.tsx        # RSVP section wrapper (server)
+│   ├── RsvpForm.tsx           # RSVP form with validation (client)
+│   ├── GiftsSection.tsx       # Gift list section header + grid (server)
+│   ├── GiftsGrid.tsx          # Scroll-reveal grid wrapper (client)
+│   ├── GiftCard.tsx           # Individual gift card with shimmer (client)
+│   ├── PhotoHubSection.tsx    # Photo gallery section wrapper (server)
+│   ├── PhotoGallery.tsx       # Masonry gallery + lightbox trigger (client)
+│   ├── PhotoLightbox.tsx      # Fullscreen photo modal (client)
+│   ├── PhotoUpload.tsx        # Google Drive upload link (client)
+│   ├── Footer.tsx             # Footer with countdown (server)
+│   ├── Countdown.tsx          # Live countdown timer (client)
+│   └── RevealObserver.tsx     # Shared scroll-reveal observer (client)
+└── data/                      # Model layer — data sources
+    ├── gifts.json             # Gift items (name, price, image URL, store link)
+    ├── ceremony.json          # Ceremony cards (venue, date, dress code)
+    ├── photos.json            # Photo gallery entries (src, alt, author)
+    └── story.json             # Timeline milestones (date, title, desc, image)
 ```
 
 ### MVC Conventions
@@ -98,20 +114,18 @@ All visual decisions are defined in [`DESIGN.md`](file:///home/gambal/gambs/test
 
 ---
 
-## Existing Sections & Planned Sections
+## Implemented Sections
 
-### Implemented ✅
+All sections are implemented. Page order: Hero → Our Story → Ceremony → RSVP → Gifts → Photo Hub → Footer.
+
+- **Navigation** — Fixed horizontal nav (desktop) / hamburger overlay (mobile), `IntersectionObserver`-tracked active state, glassmorphic scroll effect
 - **Hero** — Full-viewport baby pink background, staggered fade-up animations, couple names, date, CTA
+- **Our Story** — Timeline with alternating left/right layout (desktop), vertical connector, scroll-triggered reveals
+- **Ceremony** — Info cards (venue, date/time, dress code) on `--yellow-light` bg, hover lift
+- **RSVP** — Form with bottom-border inputs, pink focus glow, step counter, attending toggle, confirmation animation
 - **Gift List** — Responsive grid (1→4 cols), shimmer image placeholders, scroll-reveal, hover lift + arrow slide
-- **Footer** — Black background, butter-yellow ornament, pulsing heart
-
-### Planned 🔜 (from DESIGN.md)
-- **Navigation** — Fixed horizontal nav (desktop) / hamburger overlay (mobile), `IntersectionObserver`-tracked active state
-- **Ceremony** — Info cards (venue, date/time, dress code) on `--yellow-light` bg
-- **RSVP** — Form with bottom-border inputs, pink focus glow, confirmation animation
-- **Photo Hub** — Dark section with masonry gallery, drag-and-drop upload, lightbox modal
-- **Our Story** — Timeline with alternating left/right layout (future)
-- **Countdown** — Live timer with `--butter-yellow` digits (future)
+- **Photo Hub** — Dark section with masonry gallery, butter-yellow hover border, lightbox modal, Google Drive upload link
+- **Footer** — Black background, butter-yellow ornament, pulsing heart, live countdown timer
 
 ---
 
@@ -132,11 +146,12 @@ All visual decisions are defined in [`DESIGN.md`](file:///home/gambal/gambs/test
 - Responsive styles are **mobile-first** using `min-width` media queries at `540px`, `900px`, `1200px`
 
 ### Component Conventions
-- **Server Components** (default): `Hero.tsx`, `GiftsSection.tsx`, `Footer.tsx` — no `"use client"`
-- **Client Components** (when needed): `GiftCard.tsx`, `GiftsGrid.tsx` — use `"use client"` directive
+- **Server Components** (default): `Hero.tsx`, `OurStorySection.tsx`, `TimelineItem.tsx`, `CeremonySection.tsx`, `CeremonyCard.tsx`, `RsvpSection.tsx`, `GiftsSection.tsx`, `PhotoHubSection.tsx`, `Footer.tsx` — no `"use client"`
+- **Client Components** (when needed): `Navigation.tsx`, `RsvpForm.tsx`, `GiftCard.tsx`, `GiftsGrid.tsx`, `PhotoGallery.tsx`, `PhotoLightbox.tsx`, `PhotoUpload.tsx`, `Countdown.tsx`, `RevealObserver.tsx` — use `"use client"` directive
+- **Shared utility component**: `RevealObserver.tsx` — wraps children and applies `IntersectionObserver` scroll-reveal to `.reveal` elements
 - Props interfaces defined inline in the component file
 - Stagger animation delays via `style={{ animationDelay }}` or `style={{ transitionDelay }}`
-- Use `IntersectionObserver` for scroll-triggered reveals (see `GiftsGrid.tsx` pattern)
+- Use `RevealObserver` wrapper for scroll-triggered reveals (see `CeremonySection.tsx`, `OurStorySection.tsx` pattern)
 
 ### Data Conventions
 - Static data in `src/data/*.json`

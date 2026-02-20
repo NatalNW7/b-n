@@ -1,3 +1,5 @@
+"use client";
+
 export default function PhotoUpload() {
   const DRIVE_FOLDER_URL = "https://drive.google.com/drive/folders/YOUR_FOLDER_ID";
 

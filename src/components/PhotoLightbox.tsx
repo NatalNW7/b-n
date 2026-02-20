@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useCallback } from "react";
+import Image from "next/image";
 
 interface Photo {
   src: string;
@@ -33,10 +34,14 @@ export default function PhotoLightbox({ photo, onClose }: PhotoLightboxProps) {
   return (
     <div className="lightbox" onClick={onClose}>
       <button className="lightbox__close" aria-label="Fechar">✕</button>
-      <img
+      <Image
         className="lightbox__image"
         src={photo.src}
         alt={photo.alt}
+        width={1200}
+        height={800}
+        sizes="90vw"
+        style={{ width: "auto", maxWidth: "90vw", height: "auto", maxHeight: "85vh" }}
         onClick={(e) => e.stopPropagation()}
       />
       <p className="lightbox__author">{photo.author}</p>
