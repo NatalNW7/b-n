@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { label: "Cerimônia", href: "#ceremony" },
   { label: "RSVP", href: "#rsvp" },
   { label: "Presentes", href: "#gifts" },
+  { label: "Fotos", href: "#photos" },
 ] as const;
 
 export default function Navigation() {
