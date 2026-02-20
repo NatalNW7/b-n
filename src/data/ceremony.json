@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "📍",
+    "title": "Local",
+    "details": [
+      "Nome do Espaço",
+      "Rua Exemplo, 123",
+      "São Paulo — SP"
+    ]
+  },
+  {
+    "icon": "📅",
+    "title": "Data & Horário",
+    "details": [
+      "15 de Março de 2026",
+      "Sábado, às 16h"
+    ]
+  },
+  {
+    "icon": "👔",
+    "title": "Traje",
+    "details": [
+      "Esporte Fino"
+    ]
+  }
+]

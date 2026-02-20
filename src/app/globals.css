@@ -230,6 +230,83 @@ a {
 }
 
 
+/* ========================================
+   CEREMONY SECTION
+   ======================================== */
+.ceremony {
+  padding: var(--space-xl) var(--space-sm) var(--space-2xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--off-white);
+}
+
+/* Ornamental divider between label and title */
+.section-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--black);
+  opacity: 0.15;
+  margin: var(--space-xs) auto var(--space-sm);
+}
+
+.ceremony__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ceremony__card {
+  background: var(--yellow-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: opacity 0.7s ease, transform 0.7s ease, box-shadow var(--transition);
+}
+
+.ceremony__card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.ceremony__icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.ceremony__card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: var(--space-xs);
+}
+
+.ceremony__card-detail {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--black);
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+/* Scroll reveal (shared pattern) */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* ---------- Animations ---------- */
 @keyframes fadeUp {
   from {
@@ -613,6 +690,10 @@ a {
   .gifts-section {
     padding: var(--space-xl) var(--space-md) var(--space-2xl);
   }
+
+  .ceremony__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
@@ -622,6 +703,10 @@ a {
 @media (min-width: 900px) {
   .nav__links { display: flex; }
   .nav__hamburger { display: none; }
+
+  .ceremony__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   .gifts-grid {
     grid-template-columns: repeat(3, 1fr);
