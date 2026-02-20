@@ -5,6 +5,7 @@ import {
   Lato,
 } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/components/Navigation";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -45,7 +46,10 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${playfair.variable} ${cormorant.variable} ${lato.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }
