@@ -14,7 +14,7 @@ export default function Home() {
       <CeremonySection />
       <RsvpSection />
       <GiftsSection />
-      <PhotoHubSection />
+      {/* <PhotoHubSection /> */}
       <Footer />
     </>
   );

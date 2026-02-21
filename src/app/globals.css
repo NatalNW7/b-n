@@ -249,48 +249,140 @@ a {
   margin: var(--space-xs) auto var(--space-sm);
 }
 
-.ceremony__cards {
+/* ---- Venue block (map + photo + details) ---- */
+.ceremony__venue {
+  max-width: 900px;
+  margin: var(--space-xl) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Media row (map + photo) — stacked mobile, side-by-side desktop */
+.ceremony__media {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-md);
-  max-width: 900px;
-  margin: 0 auto;
 }
 
-.ceremony__card {
-  background: var(--yellow-light);
+/* Google Maps embed */
+.ceremony__map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg);
-  padding: var(--space-lg) var(--space-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--pink-light);
+}
+
+.ceremony__map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Venue photo */
+.ceremony__photo {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 16 / 9;
+}
+
+.ceremony__photo img {
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.ceremony__photo:hover img {
+  transform: scale(1.03);
+}
+
+/* Venue details */
+.ceremony__details {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.ceremony__venue-name {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.ceremony__venue-address {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--black);
+  opacity: 0.65;
+  line-height: 1.6;
+}
+
+.ceremony__venue-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--black);
+  opacity: 0.15;
+  margin: var(--space-xs) 0;
+}
+
+.ceremony__venue-date {
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--black);
+}
+
+.ceremony__venue-time {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--black);
+  opacity: 0.6;
+}
+
+/* Observations */
+.ceremony__observations {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.ceremony__obs-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
   text-align: center;
   box-shadow: var(--shadow-card);
   transition: opacity 0.7s ease, transform 0.7s ease, box-shadow var(--transition);
 }
 
-.ceremony__card:hover {
-  transform: translateY(-6px);
+.ceremony__obs-card:hover {
+  transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
 }
 
-.ceremony__icon {
-  font-size: 2rem;
+.ceremony__obs-icon {
+  font-size: 1.6rem;
   display: block;
-  margin-bottom: var(--space-sm);
-}
-
-.ceremony__card-title {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--black);
   margin-bottom: var(--space-xs);
 }
 
-.ceremony__card-detail {
+.ceremony__obs-text {
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 300;
   color: var(--black);
-  opacity: 0.7;
+  opacity: 0.75;
   line-height: 1.6;
 }
 
@@ -1206,7 +1298,11 @@ a {
     padding: var(--space-xl) var(--space-md) var(--space-2xl);
   }
 
-  .ceremony__cards {
+  .ceremony__venue-name {
+    font-size: 1.8rem;
+  }
+
+  .ceremony__observations {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1262,8 +1358,17 @@ a {
     left: -7px;
   }
 
-  .ceremony__cards {
-    grid-template-columns: repeat(3, 1fr);
+  .ceremony__venue-name {
+    font-size: 2rem;
+  }
+
+  .ceremony__media {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ceremony__map {
+    aspect-ratio: auto;
+    height: 100%;
   }
 
   .gifts-grid {

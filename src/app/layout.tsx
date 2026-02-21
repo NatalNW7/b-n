@@ -31,9 +31,9 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Lista de Presentes — Nosso Casamento",
+  title: "Bárbara & Natanael",
   description:
-    "Lista de presentes de casamento. Escolha o presente perfeito para celebrar este momento especial conosco.",
+    "Save the date - 07 de Setembro de 2026",
 };
 
 export default function RootLayout({

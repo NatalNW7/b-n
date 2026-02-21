@@ -7,16 +7,16 @@ export default function Hero() {
           className="hero__pretext animate-fade-up"
           style={{ animationDelay: "0.2s" }}
         >
-          Celebre conosco
+          SAVE THE DATE
         </p>
 
         <h1
           className="hero__title animate-fade-up"
           style={{ animationDelay: "0.5s" }}
         >
-          <span className="hero__name">Maria</span>
+          <span className="hero__name">Bárbara</span>
           <span className="hero__ampersand">&amp;</span>
-          <span className="hero__name">João</span>
+          <span className="hero__name">Natanael</span>
         </h1>
 
         <div
@@ -28,23 +28,21 @@ export default function Hero() {
           className="hero__date animate-fade-up"
           style={{ animationDelay: "1.0s" }}
         >
-          15 de Março de 2026
+          07 de Setembro de 2026
         </p>
 
         <p
           className="hero__subtitle animate-fade-up"
           style={{ animationDelay: "1.2s" }}
         >
-          Nossa Lista de Presentes
+          Por essa razão, o homem deixará pai e mãe e se unirá à sua mulher, e os dois se tornarão uma só carne.
         </p>
-
-        <a
-          href="#gifts"
-          className="hero__cta animate-fade-up"
-          style={{ animationDelay: "1.5s" }}
+        <p
+          className="hero__subtitle animate-fade-up"
+          style={{ animationDelay: "1.4s" }}
         >
-          Ver Presentes
-        </a>
+          Gênesis 2:24
+        </p>
       </div>
     </header>
   );

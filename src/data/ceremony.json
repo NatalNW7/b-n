@@ -1,26 +1,20 @@
-[
-  {
-    "icon": "📍",
-    "title": "Local",
-    "details": [
-      "Nome do Espaço",
-      "Rua Exemplo, 123",
-      "São Paulo — SP"
-    ]
-  },
-  {
-    "icon": "📅",
-    "title": "Data & Horário",
-    "details": [
-      "15 de Março de 2026",
-      "Sábado, às 16h"
-    ]
-  },
-  {
-    "icon": "👔",
-    "title": "Traje",
-    "details": [
-      "Esporte Fino"
-    ]
+{
+  "venue": {
+    "name": "Villa Vezzane",
+    "address": "R. Benedito Fontana, 510 - Mairiporã, SP, 07627-200",
+    "date": "07 de Setembro de 2026",
+    "time": "Segunda-feira, às 15h",
+    "photo": "/photos/villa_vezzane.jpg",
+    "observations": [
+      {
+        "icon": "🅿️",
+        "text": "Estacionamento gratuito no local"
+      },
+      {
+        "icon": "🥂",
+        "text": "Chegar com 40 minutos de antecedência para aproveitarem o coquetel de boas-vindas"
+      }
+    ],
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.07401795921!2d-46.54690050000001!3d-23.3493328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef395955e3621%3A0x70681273023d4309!2sVilla%20Vezzane!5e0!3m2!1sen!2sbr!4v1771635268002!5m2!1sen!2sbr"
   }
-]
+}

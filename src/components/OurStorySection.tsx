@@ -6,9 +6,8 @@ export default function OurStorySection() {
   return (
     <section className="story" id="story">
       <div className="section-header">
-        <p className="section-label">Nossa História</p>
+        <h2 className="section-title">NOSSA HISTÓRIA</h2>
         <div className="section-divider" />
-        <h2 className="section-title">Como Tudo Começou</h2>
         <p className="section-description">
           Cada capítulo nos trouxe até aqui.
         </p>

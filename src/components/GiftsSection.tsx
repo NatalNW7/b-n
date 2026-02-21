@@ -13,7 +13,7 @@ export default function GiftsSection() {
   return (
     <main className="gifts-section" id="gifts">
       <div className="section-header">
-        <p className="section-label">Com Carinho</p>
+        <p className="section-label">LISTA DE</p>
         <h2 className="section-title">Presentes</h2>
         <p className="section-description">
           Cada presente escolhido com amor para começar nossa nova vida juntos.

@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { label: "Cerimônia", href: "#ceremony" },
   { label: "RSVP", href: "#rsvp" },
   { label: "Presentes", href: "#gifts" },
-  { label: "Fotos", href: "#photos" },
+  // { label: "Fotos", href: "#photos" },
 ] as const;
 
 export default function Navigation() {
@@ -81,7 +81,7 @@ export default function Navigation() {
           className="nav__logo"
           onClick={(e) => handleLinkClick(e, "#hero")}
         >
-          M &amp; J
+          B &amp; N
         </a>
 
         {/* Desktop links */}

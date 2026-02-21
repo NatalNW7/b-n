@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-const WEDDING_DATE = new Date("2026-03-15T16:00:00-03:00"); // BRT
+const WEDDING_DATE = new Date("2026-09-07T15:00:00-03:00"); // BRT
 
 export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState<{

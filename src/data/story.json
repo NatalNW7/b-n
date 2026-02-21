@@ -1,24 +1,24 @@
 [
   {
-    "date": "Janeiro 2020",
-    "title": "O Primeiro Encontro",
-    "description": "Um café que se transformou em horas de conversa. Soubemos naquele dia que algo especial tinha começado.",
-    "image": "/photos/story-1.png"
+    "date": "Março 2023",
+    "title": "Inicio de Tudo",
+    "description": "O dia em que decidimos que aquela amizade tão especial iria se transformar em algo muito maior.",
+    "image": "/photos/pedido_namoro.jpeg"
   },
   {
-    "date": "Junho 2021",
-    "title": "A Primeira Viagem",
-    "description": "Uma semana inesquecível explorando juntos, cheia de risadas e descobertas.",
-    "image": "/photos/story-2.png"
-  },
-  {
-    "date": "Dezembro 2023",
-    "title": "O Pedido",
+    "date": "Novembro 2024",
+    "title": "O Dia do Sim",
     "description": "Com o coração acelerado e um anel escondido, a pergunta mais importante foi feita — e a resposta foi sim.",
-    "image": "/photos/story-3.png"
+    "image": "/photos/pedido_noivado.jpeg"
   },
   {
-    "date": "Março 2026",
+    "date": "Fevereiro 2026",
+    "title": "Nós",
+    "description": "Entre sorrisos e olhares, esperando com o coração cheio o que Deus preparou para nós.",
+    "image": "/photos/nós2.jpeg"
+  },
+  {
+    "date": "Setembro 2026",
     "title": "O Grande Dia",
     "description": "O começo de uma nova história, cercados de quem mais amamos.",
     "image": null
