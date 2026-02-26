@@ -558,6 +558,45 @@ a {
   box-shadow: 0 6px 20px rgba(26, 26, 26, 0.2);
 }
 
+.rsvp__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---- Radio group ---- */
+.rsvp__radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.rsvp__radio-label {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.rsvp__radio {
+  accent-color: var(--pink-dark);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* ---- Submit error ---- */
+.rsvp__error--submit {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+
 /* ---- Confirmation ---- */
 .rsvp__confirmation {
   text-align: center;

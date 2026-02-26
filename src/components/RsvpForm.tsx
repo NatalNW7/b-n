@@ -4,24 +4,27 @@ import { useState, FormEvent } from "react";
 
 interface FormData {
   name: string;
-  email: string;
-  guests: number;
-  dietary: string;
-  attending: boolean;
 }
 
 interface FormErrors {
   name?: string;
-  email?: string;
+  submit?: string;
+}
+
+function toTitleCase(str: string): string {
+  return str
+    .toLowerCase()
+    .replace(/(?:^|\s)\S/g, (char) => char.toUpperCase());
+}
+
+function sanitizeName(value: string): string {
+  return value.replace(/[^a-zA-ZÀ-ÿ\s]/g, "").slice(0, 50);
 }
 
 function validate(data: FormData): FormErrors {
   const errors: FormErrors = {};
-  if (!data.name || data.name.trim().length < 2) {
+  if (!data.name || data.name.trim().length < 10) {
     errors.name = "Por favor, insira seu nome completo.";
-  }
-  if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-    errors.email = "Por favor, insira um email válido.";
   }
   return errors;
 }
@@ -29,17 +32,14 @@ function validate(data: FormData): FormErrors {
 export default function RsvpForm() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
-    email: "",
-    guests: 1,
-    dietary: "",
-    attending: true,
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function handleChange(field: keyof FormData, value: string | number | boolean) {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-    // Clear error on change
+    const sanitized = field === "name" ? sanitizeName(value as string) : value;
+    setFormData((prev) => ({ ...prev, [field]: sanitized }));
     if (field in errors) {
       setErrors((prev) => {
         const next = { ...prev };
@@ -49,15 +49,37 @@ export default function RsvpForm() {
     }
   }
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const validationErrors = validate(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
-    // Mock: just show confirmation
-    setSubmitted(true);
+
+    setLoading(true);
+    setErrors({});
+
+    try {
+      const res = await fetch("/api/rsvp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: toTitleCase(formData.name.trim()),
+          attending: true,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Falha ao enviar confirmação.");
+      }
+
+      setSubmitted(true);
+    } catch {
+      setErrors({ submit: "Erro ao enviar. Tente novamente." });
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (submitted) {
@@ -84,14 +106,23 @@ export default function RsvpForm() {
           value={formData.name}
           onChange={(e) => handleChange("name", e.target.value)}
           placeholder="Seu nome completo"
+          maxLength={50}
+          disabled={loading}
         />
         {errors.name && <span className="rsvp__error">{errors.name}</span>}
       </div>
 
+
+      {/* Submit error */}
+      {errors.submit && (
+        <p className="rsvp__error rsvp__error--submit">{errors.submit}</p>
+      )}
+
       {/* Submit */}
-      <button type="submit" className="rsvp__submit">
-        Confirmar
+      <button type="submit" className="rsvp__submit" disabled={loading}>
+        {loading ? "Enviando..." : "Confirmar"}
       </button>
     </form>
   );
 }
+

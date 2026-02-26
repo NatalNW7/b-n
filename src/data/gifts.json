@@ -24,10 +24,10 @@
     "link": "https://www.amazon.com.br/Lava-Seca-Samsung-11kg-Wd11m4473px/dp/B0BZ129NTZ/ref=asc_df_B0BZ129NTZ?mcid=86733864653a3c5f922404eadd141228&tag=googleshopp00-20&linkCode=df0&hvadid=709884460951&hvpos=&hvnetw=g&hvrand=4686892901955086786&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-2200330569091&psc=1&language=pt_BR&gad_source=4"
   },
   {
-    "name": "Samsung Vision AI TV 55 OLED 4K",
-    "price": "R$ 4.559,05",
-    "image": "https://m.media-amazon.com/images/I/61Sa-MU+WmL._AC_SX425_.jpg",
-    "link": "https://www.amazon.com.br/Samsung-Vision-OLED-S85F-2025/dp/B0FKDXHGM6/ref=asc_df_B0FKDXHGM6?mcid=7f0264a55a683434809365ad45b09c1f&tag=googleshopp00-20&linkCode=df0&hvadid=709964502896&hvpos=&hvnetw=g&hvrand=16541253769969605997&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-2634424250832&language=pt_BR&gad_source=4&th=1"
+    "name": "Smart TV 55 TCL 4K QLED",
+    "price": "R$ 2.444,35",
+    "image": "https://imgs.casasbahia.com.br/55069451/1xg.png?imwidth=500",
+    "link": "https://www.casasbahia.com.br/smart-tv-55-tcl-55p7k-4k-qled-60hz-hdr10-dolby-atmos-dolby-vision-sistema-operacional-google-tv/p/55069451?utm_medium=Cpc&utm_source=GP_PLA&IdSku=55069451&idLojista=10037&tipoLojista=1P&gclsrc=aw.ds&&utm_campaign=cb_b2c_gg_shopping_core_tela_tclphilips&gad_source=1&gad_campaignid=22434352731&gbraid=0AAAAADtAami1TZt137z05EpANSjHgxTSV&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC3yR4jlpuEYvTFo3eq-P87H-g78cwW5cInqXsmuQriiIMBsRl0zpKBoCoAwQAvD_BwE"
   },
   {
     "name": "Batedeira Planetária Philco 5l 12 velocidades 900w",
@@ -100,6 +100,30 @@
     "price": "R$ 1.052,61",
     "image": "https://product-hub-prd.madeiramadeira.com.br/914434/images/6fc1de89-f3ce-476b-81a2-0dc3d5a8ba39itemarrom1724694102200zoom.jpg?width=700&canvas=1:1&bg-color=FFF",
     "link": "https://www.madeiramadeira.com.br/conjunto-sala-jantar-natali-120cm-canto-reto-4-cadeiras-milla-914434.html"
+  },
+  {
+    "name": "Jogo De Assadeira Cerâmica Branca Conjunto Com 3 Assadeiras",
+    "price": "R$ 299,98",
+    "image": "https://m.media-amazon.com/images/I/61CXqpfkrtL._AC_SX679_.jpg",
+    "link": "https://www.amazon.com.br/Assadeira-Cer%C3%A2mica-Branca-Conjunto-Assadeiras/dp/B0CKD4WPSG"
+  },
+  {
+    "name": "Panela Elétrica Para Fondue",
+    "price": "R$ 229,00",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_666626-MLA106299714702_022026-F.webp",
+    "link": "https://www.mercadolivre.com.br/up/MLBU3788023846?pdp_filters=item_id:MLB6239515858&matt_tool=38524122#origin=share&sid=share&wid=MLB6239515858&action=whatsapp"
+  },
+  {
+    "name": "Aparelho de Jantar 30 Peças",
+    "price": "R$ 449,58",
+    "image": "https://m.media-amazon.com/images/I/61WfjowoKRL._AC_SX679_.jpg",
+    "link": "https://www.amazon.com.br/AP-JANTAR-CHA-30PCS-AW30-5903/dp/B0CFFQBY89"
+  },
+  {
+    "name": "Kit 2 Travesseiros Pena de Ganso",
+    "price": "R$ 93,95",
+    "image": "https://m.media-amazon.com/images/I/51Dupw5h5LL._AC_SX679_.jpg",
+    "link": "https://www.amazon.com.br/Travesseiros-Sint%C3%A9tica-Lav%C3%A1vel-Maquina-Antial%C3%A9rgico/dp/B0DBJQ6QGV"
   },
   {
     "name": "Multiprocessador de Alimentos Mondial Turbo",
