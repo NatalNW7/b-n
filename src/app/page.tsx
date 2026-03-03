@@ -12,8 +12,8 @@ export default function Home() {
       <Hero />
       <OurStorySection />
       <CeremonySection />
-      <RsvpSection />
       <GiftsSection />
+      <RsvpSection />
       {/* <PhotoHubSection /> */}
       <Footer />
     </>
