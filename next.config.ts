@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "m.media-amazon.com" },
       { protocol: "https", hostname: "http2.mlstatic.com" },
       { protocol: "https", hostname: "product-hub-prd.madeiramadeira.com.br" },
+      { protocol: "https", hostname: "brastemp.vtexassets.com" },
     ],
   },
 };

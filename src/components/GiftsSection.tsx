@@ -16,8 +16,8 @@ export default function GiftsSection() {
         <p className="section-label">LISTA DE</p>
         <h2 className="section-title">Presentes</h2>
         <p className="section-description">
-          Cada presente escolhido com amor para começar nossa nova vida juntos.
-          Clique em um presente para ser direcionado à loja.
+          Cada presente escolhido com amor para começar nossa nova vida juntos.<br></br>
+          <strong>ATENÇÃO!</strong> Essa lista é apenas uma sugestão, os itens podem não estar disponíveis nas lojas ou com o preço atualizado.
         </p>
       </div>
 
