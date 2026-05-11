@@ -89,6 +89,8 @@ export default function RsvpForm() {
         <h3 className="rsvp__confirmation-title">Obrigado!</h3>
         <p className="rsvp__confirmation-text">
           Sua presença foi confirmada. Mal podemos esperar!
+          <br />
+          Atualize a página para confirmar a presença de mais alguém.
         </p>
       </div>
     );

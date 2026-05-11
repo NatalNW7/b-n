@@ -9,6 +9,8 @@ export default function RsvpSection() {
         <h2 className="section-title">Confirme sua Presença</h2>
         <p className="section-description">
           Será uma alegria enorme contar com você nesse dia tão especial.
+          <br />
+          Por favor, confirme um nome por vez.
         </p>
       </div>
       <RsvpForm />
