@@ -6,12 +6,11 @@ export default function RsvpSection() {
       <div className="section-header">
         <p className="section-label">Presença</p>
         <div className="section-divider" />
-        <h2 className="section-title">Confirme sua Presença</h2>
+        <h2 className="section-title">Lista Encerrada</h2>
         <p className="section-description">
-          Será uma alegria enorme contar com você nesse dia tão especial.
-          <br />
-          Por favor, confirme um nome por vez.
+          Agradecemos a todos que confirmaram!
         </p>
+      <span className="rsvp__confirmation-icon">✨</span>
       </div>
       <RsvpForm />
     </section>
